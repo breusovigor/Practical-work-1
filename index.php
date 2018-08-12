@@ -30,7 +30,7 @@ class Rectangle extends Figure {
 
     final public function infoAbout()
     {
-        return "Это класс прямоугольник. Количество сторон " . self::SIDES_COUNT;
+        return "Это класс " . get_class($this) . ". Количество сторон " . self::SIDES_COUNT;
     }
 }
 
@@ -56,7 +56,7 @@ class Triangle extends Figure {
 
     final public function infoAbout()
     {
-        return "Это класс треугольник. Количество сторон " . self::SIDES_COUNT;
+        return "Это класс " . get_class($this) . ". Количество сторон " . self::SIDES_COUNT;
     }
 }
 
@@ -77,7 +77,7 @@ class Square extends Figure {
 
     final public function infoAbout()
     {
-        return "Это класс квадрат. Количество сторон " . self::SIDES_COUNT;
+        return "Это класс " . get_class($this) . ". Количество сторон " . self::SIDES_COUNT;
     }
 }
 
