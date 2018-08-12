@@ -25,12 +25,12 @@ class Rectangle extends Figure {
 
     function getArea()
     {
-        return "прямоугольника " . $this->a * $this->b;
+        return get_class($this) . ' ' . $this->a * $this->b;
     }
 
     final public function infoAbout()
     {
-        return "Это класс " . get_class($this) . ". Количество сторон " . self::SIDES_COUNT;
+        return "Is a class of " . get_class($this) . ". Count of sides " . self::SIDES_COUNT;
     }
 }
 
@@ -51,12 +51,12 @@ class Triangle extends Figure {
     function getArea() {
         $p = ($this->a + $this->b + $this->c) / 2;
         $s = sqrt($p * ($p - $this->a) * ($p - $this->b) * ($p - $this->c));
-        return "треугольника " . $s;
+        return get_class($this) . ' ' .  $s;
     }
 
     final public function infoAbout()
     {
-        return "Это класс " . get_class($this) . ". Количество сторон " . self::SIDES_COUNT;
+        return "Is a class of " . get_class($this) . ". Count of sides " . self::SIDES_COUNT;
     }
 }
 
@@ -72,12 +72,12 @@ class Square extends Figure {
 
     function getArea()
     {
-        return "квадрата " . $this->a ** 2;
+        return get_class($this) . ' ' .  $this->a ** 2;
     }
 
     final public function infoAbout()
     {
-        return "Это класс " . get_class($this) . ". Количество сторон " . self::SIDES_COUNT;
+        return "Is a class of " . get_class($this) . ". Count of sides " . self::SIDES_COUNT;
     }
 }
 
@@ -90,7 +90,7 @@ $area[] = new Triangle(14, 13, 15);
 $area[] = new Square(14);
 
 foreach ($area as $result) {
-    echo "Площадь " . $result->getArea() . '</br>';
+    echo "Area of " . $result->getArea() . '</br>';
 }
 
 echo $area[0]->infoAbout() . '</br>';
